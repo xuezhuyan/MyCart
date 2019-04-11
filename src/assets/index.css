@@ -1,0 +1,62 @@
+html {
+  font-size: 11.7188px;
+}
+html,
+body,
+div,
+p,
+form,
+label,
+ul,
+li,
+dl,
+dt,
+dd,
+ol,
+img,
+button,
+b,
+em,
+strong,
+small,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  font-style: normal;
+}
+
+body {
+  font-family: '微软雅黑', 'Helvetica Neue', Arial, 'Droid Sans', sans-serif;
+  font-size: 14px;
+  color: #333;
+  background: #f2f2f2;
+  padding: 0;
+  margin: 0 auto;
+}
+
+a,
+a.link {
+  color: #666;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a,
+a.link:hover {
+  color: #666;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}

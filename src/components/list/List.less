@@ -1,0 +1,123 @@
+.main {
+  display: flex;
+}
+.navLeft {
+  width: 80px;
+  float: left;
+  position: fixed;
+  z-index: 999;
+  margin-top: 4.5rem;
+  ul {
+    .pic {
+      height: 54px;
+      width: 80px;
+      line-height: 54px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+      .new {
+        background: url(../../assets/images/new.jpg) no-repeat center;
+      }
+    }
+  }
+}
+.right {
+  flex: 1;
+  margin-left: 80px;
+  margin-top: 4.5rem;
+  // float: right;
+  overflow: hidden;
+  background-color: #fff;
+  .navTop {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    overflow: hidden;
+    ul {
+      width: 100%;
+      background-color: #fff;
+      li {
+        border-bottom: 1px solid #ccc;
+        float: left;
+        height: 2.4rem;
+        width: 50%;
+        text-align: center;
+        line-height: 2.4rem;
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+.content {
+  width: 100%;
+  height: 100%;
+  ul {
+    margin-top: 43px;
+    li {
+      position: relative;
+      width: 412px;
+      height: 101px;
+      border-bottom: 1px solid #ccc;
+      .menu-img {
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        margin-left: 10px;
+        top: 15px;
+        border-radius: 3px;
+        cursor: pointer;
+        background-image: url(../../assets/images/product_default.png);
+        background-size: cover;
+        img {
+          height: 55px;
+          width: 55px;
+          vertical-align: middle;
+          border: 0;
+        }
+      }
+      .centerL {
+        float: left;
+        height: 71px;
+        width: 290px;
+        margin: 15px 15px 15px 75px;
+        h4 {
+          font-size: 16px;
+          margin-bottom: 10px;
+          margin-top: 8px;
+          white-space: nowrap;
+
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        p {
+          font-style: normal;
+          line-height: 20px;
+          vertical-align: bottom;
+        }
+        p.activity {
+          border: 1px solid red;
+          display: inline-block;
+          color: red;
+          font-size: 1rem;
+          line-height: 1rem;
+          padding: 0.2rem 0.2rem 0.1rem;
+          margin-right: 0.3rem;
+          border-radius: 0.4rem;
+          vertical-align: 0.1rem;
+        }
+        p.list1 {
+          color: #ccc;
+        }
+        p.list2 b {
+          color: #f00;
+        }
+        p.list2 s {
+          color: #999999;
+        }
+      }
+      .picR {
+      }
+    }
+  }
+}

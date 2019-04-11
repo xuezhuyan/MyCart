@@ -1,0 +1,62 @@
+<div>
+  <BeeHead></BeeHead>
+  <!-- 中间部分 -->
+  <div class="main">
+    <!-- 左侧导航 -->
+    <div class="navLeft">
+      <ul>
+        <!-- 点击切换右侧菜单 @selectMenu(index,item.id)
+        捕捉下标和id
+        -->
+        <li
+          v-for="(menu,i) in listLeft"
+          @click="selectMenu(i,menu.id)"
+          :key="menu.id"
+          class="pic"
+        >
+          <span>{{ menu.name }}</span>
+        </li>
+      </ul>
+    </div>
+    <!-- 右侧部分 -->
+    <div class="right">
+      <!-- 右侧上导航 -->
+      <div class="navTop">
+        <ul>
+          <li><a href="#">全部排序</a></li>
+          <li><a href="#">综合排序</a></li>
+        </ul>
+      </div>
+      <!-- 右侧主体内容 -->
+      <div class="content">
+        <ul>
+          <li v-for="item in selectedProductions" :key="item.id">
+            <!-- 左侧图片 -->
+            <div class="menu-img" @click="goInfo(item.id)">
+              <img :src="item.img" alt="" height="55" width="55" />
+            </div>
+            <!-- 中间描述 -->
+            <div class="centerL" @click="goInfo(item.id)">
+              <h4>{{ item.name }}</h4>
+              <p class="activity" style="display: none;"></p>
+              <p class="list1">{{ item.specifics }}</p>
+              <p class="list2">
+                <b>{{ item.price }}</b>
+                <s v-if="item.price !== item.market_price">{{
+                  item.market_price
+                }}</s>
+              </p>
+            </div>
+            <!-- 右边加号 -->
+            <!-- 给组件添加自定义事件: selectGoods -->
+            <ProductOperate
+              v-model="item.count"
+              @selectGoods="selectGoods(item.id)"
+            ></ProductOperate>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <BeeFooter></BeeFooter>
+</div>
